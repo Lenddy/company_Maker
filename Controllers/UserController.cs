@@ -89,20 +89,24 @@ public IActionResult logIn(Login logInUser){
 }
 
 //* this is going to be profile make it tomorrow
-    [HttpGet("user/{id}")]
+    [HttpGet("User/{id}")]
     public IActionResult profile(int id){
             if(!loggedIn){
             return RedirectToAction("index");
         }
+        User? oneUser = db.Users.FirstOrDefault(u => u.UserId == id);
+        if(oneUser == null){
+            return RedirectToAction("home","Company");
+        }
         //* might want to redirect the user to the update page or some were else doit tomorrow because the user does not need to only to se there info they also will need to updated or add more things also start learning how to use socket.io for the  massaging  part of the web site
 
-    return View("profile");
+    return View("profile",oneUser);
     }
 
 
 
     [HttpGet("/user/{id}/edit")]
-    public IActionResult edit(int id){
+    public IActionResult editUser(int id){
         if(!loggedIn || uid == null){
             return RedirectToAction("index","User");
         }
@@ -114,12 +118,12 @@ public IActionResult logIn(Login logInUser){
     }
 
     [HttpPost("/user/{id}/update")]
-    public IActionResult update(int id,User updatedUser){
+    public IActionResult updateUser(int id,User updatedUser){
         if(!loggedIn || uid == null){
             return RedirectToAction("index","User");
         }
         if(ModelState.IsValid == false){
-            return edit(id);
+            return editUser(id);
         }
         User? toBeUpdated = db.Users.FirstOrDefault(c => c.UserId == id);
         if(toBeUpdated == null){

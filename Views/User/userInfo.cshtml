@@ -1,4 +1,6 @@
-@model User
+<h1>hello</h1>
+ @model User 
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,7 @@
 <body>
         <form asp-controller="User" asp-action="logout" method="post"> <button> log out</button></form>
         <form asp-controller="Company" asp-action="home" method="get"> <button> home</button></form>
-        <form asp-controller="User" asp-action="update" asp-route-id ="@Model.UserId" method="post">
+        <form asp-controller="User" asp-action="updateUser" asp-route-id ="@Model.UserId" method="post">
                 <div>
                 <label asp-for="F_name"></label>
                 <input type="text" asp-for="F_name" id="">
@@ -31,12 +33,13 @@
                 <div >
                 <label asp-for="Email"></label>
                 <p>see if you can manage how to change the password</p>
-                <p>@Model.Email</p>
+                <input  asp-for="Email" placeholder="@Model.Email" value="@Model.Email">
                 </div>
 
                 <div>
                 <label asp-for="Password"></label>
                 <p>see if you can manage how to change the password</p>
+                <input  asp-for="Password" placeholder="@Model.Password" value="@Model.Password">
                 </div>
 
                 <div>

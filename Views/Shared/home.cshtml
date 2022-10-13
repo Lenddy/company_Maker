@@ -20,6 +20,7 @@
 		}
 	</style>
 <body>
+    <a href="/congratulations">congratulations  delete this a tag afater is fix</a>
     <h1>welcome @Context.Session.GetString("uName")</h1>
     <form asp-controller="User" asp-action="logout" method="post"> <button> log out</button></form>
     <form asp-controller="Company" asp-action="newCompany" method="get"> <button>make company</button></form>
@@ -40,7 +41,9 @@
                 <td>@c.companyName</td>
                 <td>@c.companyType</td>
                 <td>@c.creators</td>
-                <td> <a asp-controller = "Company" asp-action = "viewOne" asp-route-id="@c.CompanyId"><button>More info</button> </a> @if(c.UserId == Context.Session.GetInt32("uid")){<a asp-controller = "company" asp-action = "edit" asp-route-id = "@c.CompanyId"><button>| update</button></a>  <span>| delte </span>  <form asp-controller= "User" asp-action="profile" asp-route-id = "@c.UserId"> <button> profile</button></form>} 
+                <td> <a asp-controller = "Company" asp-action = "viewOne" asp-route-id="@c.CompanyId" method = "get"><button>More info</button> </a> @if(c.UserId == Context.Session.GetInt32("uid")){<a asp-controller = "company" asp-action = "edit" asp-route-id = "@c.CompanyId" method ="get"><button>| update</button></a> 
+                <span>| delte </span>}
+                <form asp-controller= "User" asp-action="profile" asp-route-id= "@c.UserId" method="get"> <button> user profile</button></form>
                 </td>
             </tr>
         </table>

@@ -1,4 +1,4 @@
-@* @model User *@
+@* @model User  *@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +11,7 @@
     <h1>congratulation @Context.Session.GetString("uName") on making an account with us</h1>
 
     <form asp-controller="User" asp-action="logout" method="post"> <button> log out</button></form>
-    <form asp-controller="User" asp-action="edit" asp-route-id ="@Model.UserId" method="get"> <button> update info</button></form>
+    <form asp-controller="User" asp-action="editUser" asp-route-id ="@Context.Session.GetInt32("uid")" method="get"> <button> update info</button></form>
     <form asp-controller="Company" asp-action="home" method="get" > <button> home</button></form>
 
 </body>
