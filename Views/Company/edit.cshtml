@@ -1,0 +1,89 @@
+@model Company
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <form asp-controller="User" asp-action="logout" method="post"> <button> log out</button></form>
+        <form asp-controller="Company" asp-action="home" method="get"> <button> home</button></form>
+        <form asp-controller="Company" asp-action="newCompany" method="get"> <button>make company</button></form>
+    <form asp-controller="Company" asp-action="update" asp-route-id = "@Model.CompanyId" method="post">
+                <div>
+                <label asp-for="companyName"></label>
+                <input type="text" asp-for="companyName"  placeholder="@Model.companyName">
+                <span asp-validation-for="companyName"></span>
+                </div>
+
+                <div>
+                <label asp-for="companyType"></label>
+                <input type="text" asp-for="companyType" id="">
+                <span asp-validation-for="companyType" ></span>
+                </div>
+
+                <div class="description">
+                <label asp-for="companyDescription"></label>
+                <textarea asp-for="companyDescription" cols="50" rows="5" placeholder="@Model.companyDescription"></textarea>
+                <span asp-validation-for="companyDescription" ></span>
+                </div>
+
+                <div>
+                <label asp-for="creators"></label>
+                <input  asp-for="creators"  placeholder="@Model.creators">
+                <span asp-validation-for="creators" ></span>
+                </div>
+
+                <div>
+                <label asp-for="companyPhoneNumber"></label>
+                <input  asp-for="companyPhoneNumber"  placeholder="@Model.companyPhoneNumber">
+                <span asp-validation-for="companyPhoneNumber" ></span>
+                </div>
+
+                <div>
+                <label asp-for="email"></label>
+                <input  asp-for="email"  placeholder="@Model.email">
+                <span asp-validation-for="email" ></span>
+                </div>
+
+                <div>
+                <label asp-for="image"></label>
+                <input  asp-for="image" placeholder="@Model.image">
+                <span asp-validation-for="image" ></span>
+                </div>
+
+                <div>
+                <label asp-for="dateCreated"></label>
+                <input  asp-for="dateCreated" placeholder="@Model.dateCreated">
+                <span asp-validation-for="dateCreated" ></span>
+                </div>
+
+                <div>
+                <label asp-for="city"></label>
+                <input  asp-for="city" placeholder="@Model.city">
+                <span asp-validation-for="city" ></span>
+                </div>
+
+                <div>
+                <label asp-for="country"></label>
+                <input  asp-for="country"  placeholder="@Model.country">
+                <span asp-validation-for="country" ></span>
+                </div>
+
+                <div>
+                <label asp-for="address"></label>
+                <input  asp-for="address"  placeholder="@Model.address">
+                <span asp-validation-for="address" ></span>
+                </div>
+
+                <div>
+                <label asp-for="postalCode"></label>
+                <input  asp-for="postalCode"  placeholder="@Model.postalCode">
+                <span asp-validation-for="postalCode" ></span>
+                </div>
+                <button>Update</button>
+    </form>
+</body>
+</html>

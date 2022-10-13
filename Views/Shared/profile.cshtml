@@ -1,0 +1,29 @@
+@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>@Model.fullName() </h1>
+        <form asp-controller="User" asp-action="logout" method="post"> <button> log out</button></form>
+        <form asp-controller="Company" asp-action="home" method="get"> <button> home</button></form>
+        <form asp-controller="Company" asp-action="newCompany" method="get"> <button>make company</button></form>
+        @if(Model.UserId == Context.Session.GetInt32("uid")){<a asp-controller = "User" asp-action = "edit" asp-route-id = "@Model.UserId"><button>update</button></a>  <span>| delte </span> }
+        <h1>@Model.fullName() profile</h1>
+        <h1>contact info</h1>
+        <p>@Model.Email</p>
+        @if(Model.phoneNumber != null){
+            <p>phone number  @Model.phoneNumber</p>
+        }
+        
+        <p>you migth want to add a description row when you finish wiht the profile</p>
+        <p>@Model.address</p>
+        <p>you mingth want to ask the user if they want to display their adress(witch is unlikely) or their location(like the city that they are in) you will have to add location(city or are were the user is to the data base)</p>
+        <p>this is a given but remember that you will have to learn how to use socket.io and how to make api call in c#</p>
+</body>
+</html>

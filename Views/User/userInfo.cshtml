@@ -1,0 +1,57 @@
+@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    textarea{
+        text-align: center;
+    }
+</style>
+<body>
+        <form asp-controller="User" asp-action="logout" method="post"> <button> log out</button></form>
+        <form asp-controller="Company" asp-action="home" method="get"> <button> home</button></form>
+        <form asp-controller="User" asp-action="update" asp-route-id ="@Model.UserId" method="post">
+                <div>
+                <label asp-for="F_name"></label>
+                <input type="text" asp-for="F_name" id="">
+                <span asp-validation-for="F_name"></span>
+                </div>
+
+                <div>
+                <label asp-for="L_name"></label>
+                <input type="text" asp-for="L_name" id="">
+                <span asp-validation-for="L_name" ></span>
+                </div>
+
+                <div >
+                <label asp-for="Email"></label>
+                <p>see if you can manage how to change the password</p>
+                <p>@Model.Email</p>
+                </div>
+
+                <div>
+                <label asp-for="Password"></label>
+                <p>see if you can manage how to change the password</p>
+                </div>
+
+                <div>
+                <label asp-for="phoneNumber"></label>
+                <input  asp-for="phoneNumber" placeholder="add a phone number ">
+                <span asp-validation-for="phoneNumber" ></span>
+                </div>
+
+                <div>
+                <label asp-for="address"></label>
+                <input  asp-for="address" placeholder="add a phone number ">
+                <span asp-validation-for="address" ></span>
+                </div>
+
+                <button>update</button>
+    </form>
+</body>
+</html>

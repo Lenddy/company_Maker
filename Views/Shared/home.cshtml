@@ -1,0 +1,50 @@
+@model List<Company>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+		table {
+			width: 800px;
+			height: 10px;
+		}
+		table,
+		tr,
+		th,
+		td {
+			border: 1px solid black;
+		}
+	</style>
+<body>
+    <h1>welcome @Context.Session.GetString("uName")</h1>
+    <form asp-controller="User" asp-action="logout" method="post"> <button> log out</button></form>
+    <form asp-controller="Company" asp-action="newCompany" method="get"> <button>make company</button></form>
+    
+    <h1> all companies made </h1>
+    @foreach (Company c in Model)
+    {
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>company name</th>
+                <th>company type</th>
+                <th>founded by</th>
+                <th>action</th>
+            </tr>
+            <tr>
+                <td>@c.CompanyId</td>
+                <td>@c.companyName</td>
+                <td>@c.companyType</td>
+                <td>@c.creators</td>
+                <td> <a asp-controller = "Company" asp-action = "viewOne" asp-route-id="@c.CompanyId"><button>More info</button> </a> @if(c.UserId == Context.Session.GetInt32("uid")){<a asp-controller = "company" asp-action = "edit" asp-route-id = "@c.CompanyId"><button>| update</button></a>  <span>| delte </span>  <form asp-controller= "User" asp-action="profile" asp-route-id = "@c.UserId"> <button> profile</button></form>} 
+                </td>
+            </tr>
+        </table>
+    }
+
+</body>
+</html>

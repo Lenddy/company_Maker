@@ -1,0 +1,80 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = pc_parts
+build_property.RootNamespace = pc_parts
+build_property.ProjectDir = E:\codingDojoWork\learning\projects\compay\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\codingDojoWork\learning\projects\compay
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/Company/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxlZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/Company/newCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxuZXdDb21wYW55LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/Company/showOne.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxzaG93T25lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/Shared/companyInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNvbXBhbnlJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/Shared/congratulations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGNvbmdyYXR1bGF0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/Shared/home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGhvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/Shared/profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXHByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/User/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/User/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/User/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/User/register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxyZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/User/userInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclx1c2VySW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/codingDojoWork/learning/projects/compay/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-y8vc6vqu5u

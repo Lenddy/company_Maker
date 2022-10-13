@@ -1,0 +1,93 @@
+@model Company
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    textarea{
+        text-align: center;
+    }
+</style>
+<body>
+        <form asp-controller="User" asp-action="logout" method="post"> <button> log out</button></form>
+        <form asp-controller="Company" asp-action="home" method="get"> <button> home</button></form>
+    <form asp-controller="Company" asp-action="create" method="post">
+                <div>
+                <label asp-for="companyName"></label>
+                <input type="text" asp-for="companyName" id="">
+                <span asp-validation-for="companyName"></span>
+                </div>
+
+                <div>
+                <label asp-for="companyType"></label>
+                <input type="text" asp-for="companyType" id="">
+                <span asp-validation-for="companyType" ></span>
+                </div>
+
+                <div class="description">
+                <label asp-for="companyDescription"></label>
+                <textarea asp-for="companyDescription" cols="50" rows="5" placeholder="we recomment to give a description of your company some the people know what the company does "></textarea>
+                <span asp-validation-for="companyDescription" ></span>
+                </div>
+
+                <div>
+                <label asp-for="creators"></label>
+                <input  asp-for="creators" id="">
+                <span asp-validation-for="creators" ></span>
+                </div>
+
+                <div>
+                <label asp-for="companyPhoneNumber"></label>
+                <input  asp-for="companyPhoneNumber" id="">
+                <span asp-validation-for="companyPhoneNumber" ></span>
+                </div>
+
+                <div>
+                <label asp-for="email"></label>
+                <input  asp-for="email" id="">
+                <span asp-validation-for="email" ></span>
+                </div>
+
+                <div>
+                <label asp-for="image"></label>
+                <input  asp-for="image" id="">
+                <span asp-validation-for="image" ></span>
+                </div>
+
+                <div>
+                <label asp-for="dateCreated"></label>
+                <input  asp-for="dateCreated" id="">
+                <span asp-validation-for="dateCreated" ></span>
+                </div>
+
+                <div>
+                <label asp-for="city"></label>
+                <input  asp-for="city" id="">
+                <span asp-validation-for="city" ></span>
+                </div>
+
+                <div>
+                <label asp-for="country"></label>
+                <input  asp-for="country" id="">
+                <span asp-validation-for="country" ></span>
+                </div>
+
+                <div>
+                <label asp-for="address"></label>
+                <input  asp-for="address" id="">
+                <span asp-validation-for="address" ></span>
+                </div>
+
+                <div>
+                <label asp-for="postalCode"></label>
+                <input  asp-for="postalCode" id="">
+                <span asp-validation-for="postalCode" ></span>
+                </div>
+                <button>create</button>
+    </form>
+</body>
+</html>
