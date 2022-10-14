@@ -13,7 +13,7 @@
         <form asp-controller="User" asp-action="logout" method="post"> <button> log out</button></form>
         <form asp-controller="Company" asp-action="home" method="get"> <button> home</button></form>
         <form asp-controller="Company" asp-action="newCompany" method="get"> <button>make company</button></form>
-        @if(Model.UserId == Context.Session.GetInt32("uid")){<a asp-controller = "company" asp-action = "edit" asp-route-id = "@Model.CompanyId"><button>update</button></a>  <span>| delte </span> } 
+        @if(Model.UserId == Context.Session.GetInt32("uid")){<a asp-controller = "company" asp-action = "edit" asp-route-id = "@Model.CompanyId"><button>update</button></a> <form asp-controller= "Company" asp-action= "delete" asp-route-id="@Model.CompanyId" method="post"> <button>delete</button> </form> } 
     <h1>created by  @Model.creators @if(Model.dateCreated != null){<span>on @Model.dateCreated</span>}</h1>
         <div>
             <h1>company and  contact info</h1>

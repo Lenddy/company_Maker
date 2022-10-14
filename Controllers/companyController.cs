@@ -113,4 +113,23 @@ public CompanyController(DB context){
 
         return viewOne(toBeUpdated.CompanyId);
     }
+
+    [HttpPost("/company/{id}/delete")]
+    public IActionResult delete(int id){
+        if(!loggedIn || uid == null){
+            return RedirectToAction("index","User");
+        }
+        if(ModelState.IsValid == false){
+            return RedirectToAction("home");
+        }
+        Company? oneCompany = db.Companies.FirstOrDefault(d => d.CompanyId == id);
+        if(oneCompany == null || oneCompany.UserId != (int)uid){
+            return home();
+        }
+        db.Remove(oneCompany);
+        db.SaveChanges();
+        return RedirectToAction("home");
+    }
+
+//! when you make the jobs model and controller chose if you what to be necessary to create a company  before they are able to create a job  if you chose that is necessary to have a company make it that only when the company is created that a prom or button  appears  ans also make a drop down menu that holds all that companies that the user ha created  also make a counter go up or that show the amount of jobs created as available jobs  in the job side make a counter that shows the amount of people that have apply to the job the job description and contact info and location chose if that location of the job is going to be the same as the location of the company  or not  if you chose that a company has to be created before hand  also fix that profile and update user pages and figure out how to allow the users how to change their name and the password
 }

@@ -50,6 +50,7 @@ public class Company
     public string ?image {get; set;}
 
     [Display(Name ="company creation date(optional)")]
+    [DataType(DataType.Date)]
     public DateTime ?dateCreated {get; set;}
 
     [Required]
